@@ -1,0 +1,28 @@
+<h3>AngularDart <a href="https://developers.google.com/recaptcha/">Google recaptcha</a> demo!</h3>
+
+<br>
+<material-input #myInput
+                label="Your name"
+                floatingLabel
+                autoFocus>
+</material-input>
+
+<material-button raised
+                 (trigger)="onSubmit()"
+                 class="blue">
+    Say Hello
+</material-button>
+
+<hello-dialog #myDialog
+              [name]="myInput.inputText">
+</hello-dialog>
+
+<angular-recaptcha key="6LdjEBAUAAAAAEYJEYTdnBJ7_cExHfDuqodS6oiX" [(ngModel)]="value" auto-render>
+</angular-recaptcha>
+
+<div *ngIf="!error.isEmpty" class="tooltip tooltip-bottom" role="tooltip">
+    <div class="tooltip-inner">{{error}}</div>
+</div>
+
+
+
