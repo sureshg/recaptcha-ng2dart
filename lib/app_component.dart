@@ -14,10 +14,11 @@ import 'package:recaptcha_ng2dart/recaptcha/angular_recaptcha.dart';
   providers: const [materialProviders],
 )
 class AppComponent {
-
   String _value;
 
   String error = "";
+
+  String xxxxx = "6LeQixAUAAAAACDt4tNar-VbMMotm44L1TFcZ63D";
 
   @ViewChild('myDialog')
   HelloDialog dialog;
