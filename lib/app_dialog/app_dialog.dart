@@ -5,13 +5,13 @@ import 'package:angular2/core.dart';
 import 'package:angular2_components/angular2_components.dart';
 
 @Component(
-  selector: 'hello-dialog',
-  styleUrls: const ['hello_dialog.css'],
-  templateUrl: 'hello_dialog.html',
+  selector: 'app-dialog',
+  styleUrls: const ['app_dialog.css'],
+  templateUrl: 'app_dialog.html',
   directives: const [materialDirectives],
   providers: const [materialProviders],
 )
-class HelloDialog implements AfterViewInit, OnDestroy {
+class AppDialog implements AfterViewInit, OnDestroy {
   /// Modal component that hosts the inner MaterialDialog in a centered overlay.
   @ViewChild('wrappingModal')
   ModalComponent wrappingModal;
@@ -26,7 +26,7 @@ class HelloDialog implements AfterViewInit, OnDestroy {
   }
 
   void ngAfterViewInit() {
-    print("Initialied the view");
+    print("Initialied the AppDialog.");
     wrappingModal.onVisibleChanged.listen((bool event) {
       print("Visibility : $event");
     });

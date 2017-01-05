@@ -12,10 +12,13 @@ import 'package:js/js.dart';
 @JS('grecaptcha.render')
 external num _render(
     HtmlElement container, AngularRecaptchaParameters parameters);
+
 @JS('grecaptcha.reset')
 external void _reset(num id);
+
 @JS('grecaptcha.getResponse')
 external _getResponse(num id);
+
 @JS('grecaptcha')
 external dynamic get _grecaptcha;
 
@@ -23,9 +26,13 @@ external dynamic get _grecaptcha;
 @anonymous
 class AngularRecaptchaParameters {
   external String get sitekey;
+
   external String get theme;
+
   external Function get callback;
+
   external String get type;
+
   external factory AngularRecaptchaParameters(
       {String sitekey, String theme, Function callback, String type});
 }
@@ -61,6 +68,7 @@ class AngularRecaptcha extends DefaultValueAccessor implements DoCheck {
   }
 
   num _id;
+
   num get id => _id;
 
   bool get _autoRender => _parseBool(autoRender);

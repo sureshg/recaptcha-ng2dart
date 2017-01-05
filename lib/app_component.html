@@ -1,4 +1,4 @@
-<h3>AngularDart <a href="https://developers.google.com/recaptcha/">Google recaptcha</a> demo!</h3>
+<h3>AngularDart <a href="https://developers.google.com/recaptcha/">Google reCAPTCHA</a> demo!</h3>
 
 <br>
 <material-input #myInput
@@ -13,12 +13,11 @@
     Say Hello
 </material-button>
 
-<hello-dialog #myDialog
+<app-dialog #myDialog
               [name]="myInput.inputText">
-</hello-dialog>
+</app-dialog>
 
-<angular-recaptcha [key]="xxxxx" [(ngModel)]="value" auto-render>
-</angular-recaptcha>
+<angular-recaptcha #recaptcha [key]="xxxxx" [(ngModel)]="value" auto-render></angular-recaptcha>
 
 <div *ngIf="!error.isEmpty" class="tooltip tooltip-bottom" role="tooltip">
     <div class="tooltip-inner">{{error}}</div>
